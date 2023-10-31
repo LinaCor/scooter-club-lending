@@ -138,31 +138,6 @@ header {
   position: relative;
 }
 
-header::after {
-  content: ' ';
-  width: 210px;
-  height: 210px;
-  top: 50%;
-  left: 53.5%;
-  background-image: url(../img/community-header.png);
-  background-size: cover;
-  position: absolute;
-  animation-name: rotation;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .header__wrapper,
 .advantages,
 .events,
@@ -616,6 +591,10 @@ header::after {
     margin-bottom: 0px;
   }
 
+  .events__dscr {
+    max-width: 350px;
+  }
+
   .events::after {
     top: 5%;
     left: 70%;
@@ -639,6 +618,10 @@ header::after {
     display: none;
   }
 
+  .plus {
+    margin-bottom: 0;
+  }
+
   .plus__img {
     background: url(../img/cfee-footer.png) no-repeat 50% 50%/400px 400px, radial-gradient(circle 150px, #8241EF, #ffffff);
   }
@@ -650,20 +633,24 @@ header::after {
     left: -5%;
   }
 
+  .community {
+    max-width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 400px;
+    background: url(../img/smkt-footer.png) no-repeat 50% 0%, url(../img/smkt-footer-fn.png) 50% 0/540px 540px no-repeat;
+  }
+
   .community::after {
     width: 420px;
     height: 420px;
-    top: 5px;
-    left: -40px;
-  }
-
-  .community__text {
-    max-width: 420px;
+    top: 0;
+    left: 0;
   }
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .content {
     max-width: 375px;
   }
@@ -866,7 +853,7 @@ header::after {
 
   .community {
     padding-top: 365px;
-    background: url(../img/community-footer-tel.png) no-repeat 50% 0, url(../img/smkt-footer-tel.png) no-repeat 50% 10%, url(../img/smkt-footer-fn.png) 50% 20%/300px 300px no-repeat;
+    background: url(../img/smkt-footer-tel.png) no-repeat 50% 10%, url(../img/smkt-footer-fn.png) 50% 20%/300px 300px no-repeat;
   }
 
   .community__text>p {
@@ -874,7 +861,10 @@ header::after {
   }
 
   .community::after {
-    display: none;
+    width: 360px;
+    height: 360px;
+    top: 0;
+    left: 0;
   }
 
   .contract {
