@@ -1,12 +1,12 @@
 let allImg = document.querySelectorAll('.slider__item')
-let prevButton = document.querySelector('.slider__arrow_prev');
-let nextButton = document.querySelector('.slider__arrow_next');
+let prevButton = document.querySelector('.slider-arrows-prev');
+let nextButton = document.querySelector('.slider-arrows-next');
 let currentImg = 0;
 
 function currentSlide(n) {
-  allImg[currentImg].classList.remove('slider__item_active');
+  allImg[currentImg].classList.remove('slider__item-active');
   currentImg = (n + allImg.length) % allImg.length;
-  allImg[currentImg].classList.add('slider__item_active');
+  allImg[currentImg].classList.add('slider__item-active');
 }
 
 function leftButton() {
